@@ -1,0 +1,9 @@
+﻿namespace AdvancedDBAndORM_Lab1.Models
+{
+    public class CustomerAddress
+    {
+        public int Id { get; set; }
+        public  Customer Customer {get;set; }
+        public Address Addresss { get; set; }
+    }
+}
