@@ -1,4 +1,10 @@
+using AdvancedDBAndORM_Lab1.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<DBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DBContext") ?? throw new InvalidOperationException("Connection string 'DBContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
