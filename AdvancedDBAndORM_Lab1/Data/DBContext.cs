@@ -11,9 +11,9 @@ namespace AdvancedDBAndORM_Lab1.Data
         {
         }
 
-        public DbSet<Customer> Customer { get; set; } = default!;
-        public DbSet<Address> Address { get; set; } = default!;
-        public DbSet<CustomerAddress> CustomerAddress { get; set; } = default!;
+        public virtual DbSet<Customer> Customer { get; set; } = default!;
+        public virtual DbSet<Address> Address { get; set; } = default!;
+        public virtual DbSet<CustomerAddress> CustomerAddress { get; set; } = default!;
 
     }
 }
